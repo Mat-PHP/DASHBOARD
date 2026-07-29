@@ -1,0 +1,1 @@
+import formatDate from '../../utils/formatDate';export default function ActivityFeed({items=[]}){return <article className="card"><div className="section-title">Atividades recentes</div><div className="feed">{items.map(x=><div key={x._id}><i/> <span>{x.description}</span><small>{formatDate(x.createdAt)}</small></div>)}</div></article>}

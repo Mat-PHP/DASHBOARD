@@ -1,0 +1,1 @@
+import {Send} from 'lucide-react';export default function PromptInput({value,onChange,onSend,busy}){return <form className="prompt" onSubmit={e=>{e.preventDefault();onSend()}}><textarea aria-label="Mensagem" placeholder="Pergunte algo ao assistente..." value={value} onChange={e=>onChange(e.target.value)}/><button disabled={busy||!value.trim()}><Send/></button></form>}

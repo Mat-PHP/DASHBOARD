@@ -1,0 +1,1 @@
+import api from './api'; export default {summary:()=>api.get('/dashboard/summary').then(r=>r.data),health:()=>api.get('/dashboard/code-health').then(r=>r.data),activities:()=>api.get('/dashboard/activities').then(r=>r.data)};

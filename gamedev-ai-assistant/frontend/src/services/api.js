@@ -1,0 +1,1 @@
+import axios from 'axios'; const api=axios.create({baseURL:import.meta.env.VITE_API_URL||'http://localhost:8000/api',timeout:10000}); api.interceptors.response.use(r=>r,e=>Promise.reject(new Error(e.response?.data?.detail||'API indisponível. Confirme se o backend e MongoDB estão ativos.'))); export default api;
