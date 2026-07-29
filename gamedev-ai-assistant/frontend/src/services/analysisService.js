@@ -1,0 +1,1 @@
+import api from './api'; export default {chat:(id,d)=>api.post(`/analysis/chat/${id}`,d).then(r=>r.data),code:d=>api.post('/analysis/code',d).then(r=>r.data),structure:d=>api.post('/analysis/project-structure',d).then(r=>r.data),level:(id,d)=>api.post(`/analysis/level-design/${id}`,d).then(r=>r.data)};

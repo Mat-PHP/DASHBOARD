@@ -1,0 +1,1 @@
+export default function TaskCard({task,onStatus}){return <article className="task" draggable onDragStart={e=>e.dataTransfer.setData('task',task._id)}><span className={`priority ${task.priority}`}>{task.priority}</span><h4>{task.title}</h4><p>{task.description}</p><small>{task.category} · {task.estimatedHours}h</small></article>}

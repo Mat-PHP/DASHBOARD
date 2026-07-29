@@ -1,0 +1,1 @@
+import api from './api'; export default {list:id=>api.get(`/reports/project/${id}`).then(r=>r.data),generate:id=>api.post(`/reports/generate/${id}`).then(r=>r.data),remove:id=>api.delete(`/reports/${id}`)};
