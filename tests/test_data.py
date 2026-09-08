@@ -15,7 +15,7 @@ def test_sample_data_is_valid() -> None:
 def test_rejects_missing_columns() -> None:
     source = BytesIO(b"data,valor\n2026-01-01,10")
 
-    with pytest.raises(ValueError, match="colunas obrigatorias"):
+    with pytest.raises(ValueError, match="colunas obrigatórias"):
         load_transactions(source)
 
 
@@ -24,6 +24,6 @@ def test_rejects_negative_values() -> None:
         b"data,descricao,categoria,tipo,valor\n2026-01-01,Teste,Geral,Despesa,-10"
     )
 
-    with pytest.raises(ValueError, match="valores devem ser numeros positivos"):
+    with pytest.raises(ValueError, match="valores devem ser números positivos"):
         load_transactions(source)
 

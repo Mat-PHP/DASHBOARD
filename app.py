@@ -8,7 +8,6 @@ import streamlit as st
 from finance_dashboard.analytics import calculate_summary, monthly_totals
 from finance_dashboard.data import load_transactions, sample_transactions
 
-
 st.set_page_config(page_title="Finanças em Foco", page_icon="💸", layout="wide")
 
 st.title("💸 Finanças em Foco")
